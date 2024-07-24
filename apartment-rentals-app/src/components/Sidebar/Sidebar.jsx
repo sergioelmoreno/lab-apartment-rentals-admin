@@ -1,14 +1,23 @@
 import './Sidebar.css'
 
 const Sidebar = () => {
-  return (
-    <aside>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About us</a></li>
-      </ul>
-    </aside>
-  )
+    return (
+        <div className="Sidebar">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Apartamentos</a>
+                    </li>
+                    <li>
+                        <a href="#">Otros</a>
+                    </li>
+                    <li>
+                        <a href="#">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    )
 }
 
 export default Sidebar
