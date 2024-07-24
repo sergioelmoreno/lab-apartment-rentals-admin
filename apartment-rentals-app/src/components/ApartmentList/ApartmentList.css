@@ -1,0 +1,4 @@
+.ApartmentList {
+    min-height: 100vh;
+    overflow: scroll;
+}
