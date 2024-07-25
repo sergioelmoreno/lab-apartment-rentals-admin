@@ -1,18 +1,16 @@
 const Apartment = ({ name, description, rate, id, removeApartment }) => {
 
-    return (
-        <li>
-            <p>{name}</p>
-            <p>{description}</p>
-            <p>{rate < 80 ? "bad reviewed" : "good reviewed"}</p>
-            <button onClick={() => removeApartment(id)}>Delete Apartment</button>
+  return (
+    <li>
+      <p>{name}</p>
+      <p>{description}</p>
+      <p>{rate < 80 ? "bad reviewed" : "good reviewed"}</p>
+      <button onClick={() => removeApartment(id)}>Delete Apartment</button>
 
-            <hr></hr>
+      <hr></hr>
+    </li>
 
-
-        </li>
-
-    );
+  );
 }
 
 export default Apartment
