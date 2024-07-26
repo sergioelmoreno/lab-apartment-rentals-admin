@@ -1,4 +1,12 @@
-.ApartmentsListPage {
-    min-height: 100vh;
-    overflow: scroll;
+.ApartmentsListPage ul {
+    list-style: none;
+    padding: 0 .5rem;
+    margin-top: 0;
+}
+
+.ApartmentsListPage ul li {
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+    margin-bottom: 1rem;
 }

@@ -4,15 +4,18 @@ import './ApartmentCard.css'
 const ApartmentCard = ({ name, description, rate, id, removeApartment }) => {
 
   return (
-    <li>
-      <p>{name}</p>
+
+    <li style={{
+      backgroundColor: rate >= 80 ? 'gray' : ''
+    }}>
+      <h1>{name}</h1>
       <p>{description}</p>
       <p><strong>{rate < 80 ? "bad reviewed" : "good reviewed"}</strong></p>
       <hr />
-      <Link to={`/apartment/${id}`}>See details</Link>
-      <button onClick={() => removeApartment(id)}>Delete Apartment</button>
-      <hr />
-
+      <div className='card-footer'>
+        <Link to={`/apartment/${id}`} className='btn'>See details</Link>
+        <button onClick={() => removeApartment(id)}>Remove Apartment</button>
+      </div>
     </li>
 
   );

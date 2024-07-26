@@ -1,3 +1,14 @@
+:root {
+  --box-shadow: 0 1px 4px rgba(0, 0, 0, .52);
+  --navbar-bg: #e7d1ff;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: sans-serif;
   margin: 0;
@@ -8,11 +19,94 @@ body {
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-top: 0;
+}
+
 img {
   width: 100%;
 }
 
-main {
+a,
+a:visited {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+p {
+  margin-top: 0;
+}
+
+button,
+.btn {
+  background-color: var(--navbar-bg);
+  box-shadow: var(--box-shadow);
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+}
+
+.container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.App {
+  max-width: 940px;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+@media screen and (min-width: 500px) {
+
+  /* no grid support? */
+  .Sidebar {
+    float: left;
+    width: 19.1489%;
+  }
+
+  section {
+    float: right;
+    width: 79.7872%;
+    height: min-content;
+    overflow-y: auto;
+    color: #444444;
+    padding-top: 1px;
+  }
+
+  section a,
+  section a:visited {
+    color: #444444;
+  }
+
+  .App {
+    margin: 1rem auto 0 auto;
+    grid-template-columns: 1fr 3fr;
+  }
+
+  .Navbar,
+  .Footer {
+    grid-column: 1 / -1;
+    /* needed for the floated layout */
+    clear: both;
+  }
+
+}
+
+.App>* {
+  border-radius: .5rem;
+  /* needed for the floated layout*/
+  margin-bottom: 10px;
+}
+
+/* We need to set the widths used on floated items back to auto, and remove the bottom margin as when we have grid we have gaps. */
+@supports (display: grid) {
+  .App>* {
+    width: auto;
+    margin: 0;
+  }
 }

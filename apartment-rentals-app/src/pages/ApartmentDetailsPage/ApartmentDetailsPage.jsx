@@ -10,16 +10,18 @@ const ApartmentDetailsPage = () => {
   const { id, country, name, description, house_rules, host_name, bathrooms, beds, price } = selectedApartment
   return (
     <section className="ApartmentDetailsPage">
-      <Link to='/'>Back to Home</Link>
-      <hr />
-      <h1>{name}</h1>
-      <p><strong>Price: {price} per day</strong></p>
-      <p><small>{country}</small></p>
-      <p>Host: {host_name}</p>
-      <p>Description: {description}</p>
-      <p>House Rules: {house_rules}</p>
-      <p>Bathrooms: {bathrooms}</p>
-      <p>Beds: {beds}</p>
+      <div className="container">
+        <Link to='/' className="btn">Back to Home</Link>
+        <hr />
+        <h1>{name}</h1>
+        <p><strong>Price: {price} per day</strong></p>
+        <p><small>{country}</small></p>
+        <p>Host: {host_name}</p>
+        <p>Description: {description}</p>
+        <p>House Rules: {house_rules}</p>
+        <p>Bathrooms: {bathrooms}</p>
+        <p>Beds: {beds}</p>
+      </div>
     </section>
 
   )
