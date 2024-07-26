@@ -1,17 +1,9 @@
 import './ApartmentsList.css'
-import { results } from './../../data/apartments.json'
-import { useState } from 'react'
 import ApartmentCard from '../ApartmentCard/ApartmentCard'
 import { Link } from 'react-router-dom'
 
-const ApartmentsList = () => {
+const ApartmentsList = ({ apartments, removeApartment }) => {
 
-    const [apartments, setApartments] = useState(results)
-
-    const removeApartment = apartmentId => {
-        const filteredApartments = apartments.filter(elm => elm.id != apartmentId)
-        setApartments(filteredApartments)
-    }
 
     return (
         <div className="ApartmentsList">
