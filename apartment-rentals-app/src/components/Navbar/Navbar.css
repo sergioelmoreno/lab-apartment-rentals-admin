@@ -9,6 +9,7 @@
 .Navbar nav {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .Navbar nav {
@@ -20,12 +21,10 @@
 }
 
 .Navbar .logo {
-    position: absolute;
-    left: 50%;
-    margin-left: -30px;
     width: 60px;
 }
 
 .Navbar h1 {
     margin-left: 20px;
+    margin-bottom: 0;
 }

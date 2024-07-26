@@ -1,16 +1,13 @@
 import { Link } from 'react-router-dom';
 import './ApartmentCard.css'
 
-const ApartmentCard = ({ name, description, rate, id, removeApartment }) => {
+const ApartmentCard = ({ name, description, review_scores_rating, id, removeApartment }) => {
 
   return (
-
-    <li style={{
-      backgroundColor: rate >= 80 ? 'gray' : ''
-    }}>
-      <h1>{name}</h1>
+    <li style={{ border: review_scores_rating >= 80 ? '1px solid rebeccapurple' : null }}>
+      <h2 style={{ color: review_scores_rating >= 80 ? 'rebeccapurple' : null }}>{name}</h2>
       <p>{description}</p>
-      <p><strong>{rate < 80 ? "bad reviewed" : "good reviewed"}</strong></p>
+      <p><strong>{`Rating: ${review_scores_rating} ${review_scores_rating < 80 ? "bad reviewed" : "Good reviewed!!"}`}</strong></p>
       <hr />
       <div className='card-footer'>
         <Link to={`/apartment/${id}`} className='btn'>See details</Link>

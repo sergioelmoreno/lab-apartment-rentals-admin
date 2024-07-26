@@ -1,6 +1,7 @@
 :root {
   --box-shadow: 0 1px 4px rgba(0, 0, 0, .52);
   --navbar-bg: #e7d1ff;
+  --card-rated-bg: #f8f1ff;
 }
 
 *,
@@ -29,6 +30,7 @@ h5 {
 
 img {
   width: 100%;
+  height: auto;
 }
 
 a,
@@ -47,6 +49,7 @@ button,
   box-shadow: var(--box-shadow);
   padding: .5rem 1rem;
   border-radius: .5rem;
+  border: 1px solid rebeccapurple;
 }
 
 .container {
