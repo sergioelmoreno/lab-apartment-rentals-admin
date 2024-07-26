@@ -7,11 +7,12 @@ const Sidebar = () => {
             <nav>
                 <ul>
                     <li>
-                        <Link to='/'>Apartamentos</Link>
+                        <Link to="/">Apartamentos</Link>
                     </li>
                     <li>
-                        <Link to='/about-us'>Sobre nosotros</Link>
+                        <Link to="/">Otros</Link>
                     </li>
+
                 </ul>
             </nav>
         </div>
