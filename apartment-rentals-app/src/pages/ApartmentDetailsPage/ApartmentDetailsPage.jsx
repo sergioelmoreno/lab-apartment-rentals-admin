@@ -1,11 +1,11 @@
 import { Link, useParams } from "react-router-dom";
-import { results as apartmentsList } from '../../data/rentals.json'
 
 
-const ApartmentDetailsPage = () => {
+
+const ApartmentDetailsPage = ({ apartments }) => {
 
   const { apartment_id } = useParams()
-  const selectedApartment = apartmentsList.find(apartment => apartment.id === apartment_id)
+  const selectedApartment = apartments.find(apartment => apartment.id === apartment_id)
   console.log(selectedApartment)
   const { id, country, name, description, house_rules, host_name, bathrooms, beds, price } = selectedApartment
   return (
